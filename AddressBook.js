@@ -55,7 +55,7 @@ class Contact {
         if (nameRegex.test(firstName))
             this._firstName = firstName;
         else
-            throw "FIRST NAME is Incorrect ";
+            throw "first name is incorrect";
     }
 
     set lastName(lastName) {
@@ -111,10 +111,16 @@ class Contact {
         return "First Name : " + this.firstName + ", Last Name : " + this.lastName + ", Address : " + this.address + ", City : " + this.city + ", State : " + this.state + ", Zip : " + this.zip + ", Phone Number : " + this.phoneNumber + ", Email : " + this.email;
     }
 }
-
+// creating An Array to Store Contacts
+let addressBookArray = new Array();
 try {
-    let contact = new Contact("Prashanth", "Navin", "Yelahanka", "Bangalore", "Karnataka", "560 064", "91 9876543210", "abc@gmail.com");
-    console.log(contact.toString());
+    addressBookArray.push(new Contact("Prashanth", "Navin", "Yelahanka", "Bangalore", "Karnataka", "560 064", "91 9876543210", "abcd@gmail.com"));
 } catch (e) {
-    console.log(e);
+    console.error(e);
 }
+try {
+    addressBookArray.push(new Contact("Praveen", "Kumar", "OldTown", "Bengaluru", "Karnataka", "560 064", "91 9876543210", "defg@gmail.com"));
+} catch (e) {
+    console.error(e);
+}
+console.log(addressBookArray);
